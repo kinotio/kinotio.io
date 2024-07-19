@@ -9,6 +9,22 @@ type PartenersOrSponsorsProps = {
 }
 
 export const DATA = {
+  typeform: 'https://grkisim22mo.typeform.com/to/tUMWdPVx',
+  url: {
+    github: 'https://github.com/kinotio',
+    discord: 'https://discord.gg/cskvbKQA',
+    linkedin: 'https://linkedin.com/company/kinotio',
+  },
+  color: {
+    gradient: {
+      from: '#6048e7',
+      to: '#56d49e',
+    },
+    base: {
+      dark: '#000000',
+      light: '#ffffff',
+    },
+  },
   navbar: [
     {
       href: '#testimonials',
@@ -27,21 +43,6 @@ export const DATA = {
       label: 'FAQ',
     },
   ] satisfies RouteProps[],
-  url: {
-    github: 'https://github.com/kinotio',
-    discord: 'https://discord.gg/cskvbKQA',
-    linkedin: 'https://linkedin.com/company/kinotio',
-  },
-  color: {
-    gradient: {
-      from: '#6048e7',
-      to: '#56d49e',
-    },
-    base: {
-      dark: '#000000',
-      light: '#ffffff',
-    },
-  },
   partners: [
     {
       icon: 'Crown',
