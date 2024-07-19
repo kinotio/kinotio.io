@@ -7,16 +7,18 @@ import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import Particles from '@/components/magicui/particles'
 
+import { DATA } from '@/data'
+
 export const HeroSection = () => {
   const { theme } = useTheme()
-  const [color, setColor] = useState('#ffffff')
+  const [color, setColor] = useState(DATA.color.base.light)
 
   useEffect(() => {
-    setColor(theme === 'dark' ? '#ffffff' : '#000000')
+    setColor(theme === 'dark' ? DATA.color.base.light : DATA.color.base.dark)
   }, [theme])
 
   return (
-    <section className="container w-full lg:min-h-[70vh] md:min-h-[70vh]">
+    <section className="container w-full lg:min-h-[65vh] md:min-h-[65vh]">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
         <div className="text-center space-y-8">
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
