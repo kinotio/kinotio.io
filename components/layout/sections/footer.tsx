@@ -8,6 +8,8 @@ import { Separator } from '@/components/ui/separator'
 
 import { getCurrentYear } from '@/lib/utils'
 
+import { DATA } from '@/data'
+
 export const FooterSection = () => {
   const { theme } = useTheme()
 
@@ -16,7 +18,7 @@ export const FooterSection = () => {
       <div className="p-10 bg-card border border-secondary rounded-2xl">
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
-            <Link href="#" className="flex font-bold items-center">
+            <Link href="/" className="flex font-bold items-center">
               <Image
                 src={
                   theme === 'light'
@@ -122,7 +124,7 @@ export const FooterSection = () => {
             {` © ${getCurrentYear()} `}
             <Link
               target="_blank"
-              href="https://github.com/kinotio"
+              href={DATA.url.github}
               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
             >
               Kinotio
