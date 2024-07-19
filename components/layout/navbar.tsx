@@ -44,6 +44,7 @@ export const Navbar = () => {
           height={100}
           alt="Kinotio"
           className="ml-2"
+          priority={true}
         />
       </Link>
 
