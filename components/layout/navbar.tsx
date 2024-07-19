@@ -22,7 +22,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
-
+import { BorderBeam } from '@/components/magicui/border-beam'
 import { ToggleTheme } from '@/components/layout/toogle-theme'
 
 import { DATA } from '@/data'
@@ -122,13 +122,21 @@ export const Navbar = () => {
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link
             aria-label="View on GitHub"
-            href="https://github.com/kinotio"
+            href={DATA.url.github}
             target="_blank"
           >
             <Github className="size-5" />
           </Link>
         </Button>
       </div>
+
+      <BorderBeam
+        size={250}
+        duration={12}
+        delay={9}
+        colorFrom={DATA.color.gradient.from}
+        colorTo={DATA.color.gradient.to}
+      />
     </header>
   )
 }
