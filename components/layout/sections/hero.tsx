@@ -1,13 +1,13 @@
-"use client";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const HeroSection = () => {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
   return (
     <section className="container w-full">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
@@ -62,9 +62,9 @@ export const HeroSection = () => {
             height={1200}
             className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30"
             src={
-              theme === "light"
-                ? "/hero-image-light.jpeg"
-                : "/hero-image-dark.jpeg"
+              theme === 'light'
+                ? '/hero-image-light.jpeg'
+                : '/hero-image-dark.jpeg'
             }
             alt="dashboard"
           />
@@ -73,5 +73,5 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

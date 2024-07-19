@@ -1,44 +1,44 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from '@/components/ui/badge'
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card'
 
 enum ProService {
   YES = 1,
   NO = 0,
 }
 interface ServiceProps {
-  title: string;
-  pro: ProService;
-  description: string;
+  title: string
+  pro: ProService
+  description: string
 }
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: 'Custom Domain Integration',
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.',
     pro: 0,
   },
   {
-    title: "Social Media Integrations",
+    title: 'Social Media Integrations',
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.',
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
+    title: 'Email Marketing Integrations',
+    description: 'Lorem dolor sit amet adipisicing.',
     pro: 0,
   },
   {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: 'SEO Optimization',
+    description: 'Lorem ipsum dolor sit amet consectetur.',
     pro: 1,
   },
-];
+]
 
 export const ServicesSection = () => {
   return (
@@ -77,5 +77,5 @@ export const ServicesSection = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -6,8 +6,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Check } from "lucide-react";
+} from '@/components/ui/card'
+import { Check } from 'lucide-react'
 
 enum PopularPlan {
   NO = 0,
@@ -15,61 +15,61 @@ enum PopularPlan {
 }
 
 interface PlanProps {
-  title: string;
-  popular: PopularPlan;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefitList: string[];
+  title: string
+  popular: PopularPlan
+  price: number
+  description: string
+  buttonText: string
+  benefitList: string[]
 }
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: 'Free',
     popular: 0,
     price: 0,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+    buttonText: 'Start Free Trial',
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      '1 team member',
+      '1 GB storage',
+      'Upto 2 pages',
+      'Community support',
+      'AI assistance',
     ],
   },
   {
-    title: "Premium",
+    title: 'Premium',
     popular: 1,
     price: 45,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+    buttonText: 'Get starterd',
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      '4 team member',
+      '8 GB storage',
+      'Upto 6 pages',
+      'Priority support',
+      'AI assistance',
     ],
   },
   {
-    title: "Enterprise",
+    title: 'Enterprise',
     popular: 0,
     price: 120,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      'Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.',
+    buttonText: 'Contact US',
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      '10 team member',
+      '20 GB storage',
+      'Upto 10 pages',
+      'Phone & email support',
+      'AI assistance',
     ],
   },
-];
+]
 
 export const PricingSection = () => {
   return (
@@ -93,8 +93,8 @@ export const PricingSection = () => {
               key={title}
               className={
                 popular === PopularPlan?.YES
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]"
-                  : ""
+                  ? 'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]'
+                  : ''
               }
             >
               <CardHeader>
@@ -124,7 +124,7 @@ export const PricingSection = () => {
               <CardFooter>
                 <Button
                   variant={
-                    popular === PopularPlan?.YES ? "default" : "secondary"
+                    popular === PopularPlan?.YES ? 'default' : 'secondary'
                   }
                   className="w-full"
                 >
@@ -136,5 +136,5 @@ export const PricingSection = () => {
         )}
       </div>
     </section>
-  );
-};
+  )
+}
