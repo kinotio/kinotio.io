@@ -40,29 +40,26 @@ export const TestimonialSection = () => {
         className="relative w-[80%] sm:w-[90%] lg:max-w-screen-xl mx-auto"
       >
         <CarouselContent>
-          {DATA.reviews.map((review) => (
-            <CarouselItem
-              key={review.name}
-              className="md:basis-1/2 lg:basis-1/3"
-            >
+          {DATA.reviews.map((review, idx) => (
+            <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
               <ShineBorder
                 className="bg-muted/50 dark:bg-card h-72 border border-secondary"
                 color={[DATA.color.gradient.from, DATA.color.gradient.to]}
               >
                 <CardContent className="pt-6 pb-0">
                   <div className="flex gap-1 pb-6">
-                    {Array.from({ length: 5 }).map((_, index) => {
-                      if (index < Math.floor(review.rating)) {
+                    {Array.from({ length: 5 }).map((_, idx) => {
+                      if (idx < Math.floor(review.rating)) {
                         return (
                           <Star
-                            key={index}
+                            key={idx}
                             className="size-4 fill-primary text-primary"
                           />
                         )
-                      } else if (index < review.rating) {
+                      } else if (idx < review.rating) {
                         return (
                           <Star
-                            key={index}
+                            key={idx}
                             className="size-4 fill-primary text-primary half"
                             style={{ clipPath: 'inset(0 50% 0 0)' }}
                           />
@@ -70,7 +67,7 @@ export const TestimonialSection = () => {
                       } else {
                         return (
                           <Star
-                            key={index}
+                            key={idx}
                             className="size-4 fill-primary text-primary hidden"
                           />
                         )

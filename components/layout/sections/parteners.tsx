@@ -19,9 +19,9 @@ export const PartenersSection = () => {
 
       <div className="mx-auto">
         <Marquee className="gap-[3rem]" fade innerClassName="gap-[3rem]">
-          {DATA.partners.map(({ icon, name }) => (
+          {DATA.partners.map(({ icon, name }, idx) => (
             <div
-              key={name}
+              key={idx}
               className="flex items-center text-xl md:text-2xl font-medium"
             >
               <Icon
