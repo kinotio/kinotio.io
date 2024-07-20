@@ -4,12 +4,15 @@ import '@devnomic/marquee/dist/index.css'
 
 import { icons } from 'lucide-react'
 import { Marquee } from '@devnomic/marquee'
+import { useTheme } from 'next-themes'
 
 import { Icon } from '@/components/ui/icon'
 
 import { DATA } from '@/data'
 
 export const PartenersSection = () => {
+  const { theme } = useTheme()
+
   return (
     <section id="parteners" className="max-w-[75%] mx-auto pb-24 sm:pb-32">
       <h2 className="text-lg md:text-xl text-center mb-6">Our Parteners</h2>
@@ -24,7 +27,7 @@ export const PartenersSection = () => {
               <Icon
                 name={icon as keyof typeof icons}
                 size={32}
-                color="white"
+                color={theme === 'dark' ? 'white' : 'black'}
                 className="mr-2"
               />
               {name}
