@@ -8,6 +8,12 @@ type PartenersOrSponsorsProps = {
   name: string
 }
 
+type BenefitsProps = {
+  icon: string
+  title: string
+  description: string
+}
+
 export const DATA = {
   typeform: 'https://grkisim22mo.typeform.com/to/tUMWdPVx',
   url: {
@@ -92,61 +98,87 @@ export const DATA = {
   partners: [
     {
       icon: 'Crown',
-      name: 'Acmebrand',
+      name: 'Your company',
     },
     {
       icon: 'Vegan',
-      name: 'Acmelogo',
+      name: 'Your company',
     },
     {
       icon: 'Ghost',
-      name: 'Acmesponsor',
+      name: 'Your company',
     },
     {
       icon: 'Puzzle',
-      name: 'Acmeipsum',
+      name: 'Your company',
     },
     {
       icon: 'Squirrel',
-      name: 'Acme',
+      name: 'Your company',
     },
     {
       icon: 'Cookie',
-      name: 'Accmee',
+      name: 'Your company',
     },
     {
       icon: 'Drama',
-      name: 'Acmetech',
+      name: 'Your company',
     },
   ] satisfies PartenersOrSponsorsProps[],
   sponsors: [
     {
       icon: 'Crown',
-      name: 'Acmebrand',
+      name: 'Your company',
     },
     {
       icon: 'Vegan',
-      name: 'Acmelogo',
+      name: 'Your company',
     },
     {
       icon: 'Ghost',
-      name: 'Acmesponsor',
+      name: 'Your company',
     },
     {
       icon: 'Puzzle',
-      name: 'Acmeipsum',
+      name: 'Your company',
     },
     {
       icon: 'Squirrel',
-      name: 'Acme',
+      name: 'Your company',
     },
     {
       icon: 'Cookie',
-      name: 'Accmee',
+      name: 'Your company',
     },
     {
       icon: 'Drama',
-      name: 'Acmetech',
+      name: 'Your company',
     },
   ] satisfies PartenersOrSponsorsProps[],
+  benefits: [
+    {
+      icon: 'Wallet',
+      title: 'Financial Benefits',
+      description:
+        'Reduced development costs by leveraging open source contributions and resources.',
+    },
+    {
+      icon: 'TrendingUp',
+      title: 'Market Insights',
+      description:
+        'Feedback from a diverse group of users and developers to inform product development and improvement.',
+    },
+    {
+      icon: 'Handshake',
+      title: 'Corporate Social Responsibility (CSR)',
+      description:
+        'Demonstration of commitment to open source principles and social responsibility.',
+    },
+    {
+      icon: 'Sparkle',
+      title: 'Influence and Leadership',
+      description:
+        'Ability to shape industry standards and best practices through active participation and support.',
+    },
+  ] satisfies BenefitsProps[],
 }
