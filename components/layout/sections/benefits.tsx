@@ -27,14 +27,14 @@ export const BenefitsSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 w-full">
-            {DATA.benefits.map(({ icon, title, description }, index) => (
+            {DATA.benefits.map(({ icon, title, description }, idx) => (
               <NeonGradientCard
-                key={title}
-                className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"
+                key={idx}
                 neonColors={{
                   firstColor: DATA.color.gradient.from,
                   secondColor: DATA.color.gradient.to,
                 }}
+                className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"
               >
                 <CardHeader>
                   <div className="flex justify-between">
@@ -45,7 +45,7 @@ export const BenefitsSection = () => {
                       className="mb-6 text-primary"
                     />
                     <span className="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30">
-                      0{index + 1}
+                      0{idx + 1}
                     </span>
                   </div>
 

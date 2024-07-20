@@ -10,7 +10,7 @@ import BlurFade from '@/components/magicui/blur-fade'
 
 import { DATA } from '@/data'
 
-const BLUR_FADE_DELAY = 0.04
+const BLUR_FADE_DELAY = 0.02
 
 export const HeroSection = () => {
   const { theme } = useTheme()
