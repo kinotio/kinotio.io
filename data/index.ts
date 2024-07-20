@@ -20,6 +20,14 @@ type FeaturesProps = {
   description: string
 }
 
+type ReviewProps = {
+  image: string
+  name: string
+  userName: string
+  comment: string
+  rating: number
+}
+
 export const DATA = {
   typeform: 'https://grkisim22mo.typeform.com/to/tUMWdPVx',
   url: {
@@ -107,27 +115,11 @@ export const DATA = {
       name: 'Your company',
     },
     {
-      icon: 'Vegan',
+      icon: 'Crown',
       name: 'Your company',
     },
     {
-      icon: 'Ghost',
-      name: 'Your company',
-    },
-    {
-      icon: 'Puzzle',
-      name: 'Your company',
-    },
-    {
-      icon: 'Squirrel',
-      name: 'Your company',
-    },
-    {
-      icon: 'Cookie',
-      name: 'Your company',
-    },
-    {
-      icon: 'Drama',
+      icon: 'Crown',
       name: 'Your company',
     },
   ] satisfies PartenersOrSponsorsProps[],
@@ -137,27 +129,11 @@ export const DATA = {
       name: 'Your company',
     },
     {
-      icon: 'Vegan',
+      icon: 'Crown',
       name: 'Your company',
     },
     {
-      icon: 'Ghost',
-      name: 'Your company',
-    },
-    {
-      icon: 'Puzzle',
-      name: 'Your company',
-    },
-    {
-      icon: 'Squirrel',
-      name: 'Your company',
-    },
-    {
-      icon: 'Cookie',
-      name: 'Your company',
-    },
-    {
-      icon: 'Drama',
+      icon: 'Crown',
       name: 'Your company',
     },
   ] satisfies PartenersOrSponsorsProps[],
@@ -225,4 +201,30 @@ export const DATA = {
         'Projects aimed at solving social issues and contributing to the public good.',
     },
   ] satisfies FeaturesProps[],
+  reviews: [
+    {
+      image: 'https://github.com/shadcn.png',
+      name: 'John Doe',
+      userName: 'Product Manager',
+      comment:
+        'Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ',
+      rating: 2.5,
+    },
+    {
+      image: 'https://github.com/shadcn.png',
+      name: 'John Doe',
+      userName: 'Product Manager',
+      comment:
+        'Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ',
+      rating: 2.5,
+    },
+    {
+      image: 'https://github.com/shadcn.png',
+      name: 'John Doe',
+      userName: 'Product Manager',
+      comment:
+        'Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ',
+      rating: 2.5,
+    },
+  ] satisfies ReviewProps[],
 }
