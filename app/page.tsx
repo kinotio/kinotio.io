@@ -5,6 +5,7 @@ import { FooterSection } from '@/components/layout/sections/footer'
 import { HeroSection } from '@/components/layout/sections/hero'
 import { PartenersSection } from '@/components/layout/sections/parteners'
 import { TestimonialSection } from '@/components/layout/sections/testimonial'
+import { ContactSection } from '@/components/layout/sections/contact'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <FeaturesSection />
       <TestimonialSection />
       <FAQSection />
+      <ContactSection />
       <FooterSection />
     </>
   )

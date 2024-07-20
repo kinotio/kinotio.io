@@ -8,7 +8,7 @@ import { DATA } from '@/data'
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="container ">
+    <section id="benefits" className="container">
       <div className="py-24 sm:py-32">
         <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
           <div>
