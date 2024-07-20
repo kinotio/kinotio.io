@@ -80,6 +80,10 @@ html {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
 }
 
+.half {
+  clip-path: inset(0 50% 0 0);
+}
+
 @layer base {
   * {
     @apply border-border;
