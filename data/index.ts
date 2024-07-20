@@ -14,6 +14,12 @@ type BenefitsProps = {
   description: string
 }
 
+type FeaturesProps = {
+  icon: string
+  title: string
+  description: string
+}
+
 export const DATA = {
   typeform: 'https://grkisim22mo.typeform.com/to/tUMWdPVx',
   url: {
@@ -181,4 +187,42 @@ export const DATA = {
         'Ability to shape industry standards and best practices through active participation and support.',
     },
   ] satisfies BenefitsProps[],
+  features: [
+    {
+      icon: 'Zap',
+      title: 'Diversity and Inclusion',
+      description:
+        'Supportive environment that welcomes contributors of all backgrounds and skill levels.',
+    },
+    {
+      icon: 'BadgeCheck',
+      title: 'Contributor Recognition',
+      description:
+        'Opportunities for contributors to present their work at community events and conferences.',
+    },
+    {
+      icon: 'Vote',
+      title: 'Open Decision-Making',
+      description:
+        'Community involvement in key decisions through votes, polls, and discussions.',
+    },
+    {
+      icon: 'Lightbulb',
+      title: 'Innovation Focus',
+      description:
+        'Encouragement of experimental projects and innovative ideas.',
+    },
+    {
+      icon: 'Map',
+      title: 'Collaborative Roadmapping',
+      description:
+        'Regular updates and reviews to align with community and user needs.',
+    },
+    {
+      icon: 'HeartHandshake',
+      title: 'Ethical and Responsible Development',
+      description:
+        'Projects aimed at solving social issues and contributing to the public good.',
+    },
+  ] satisfies FeaturesProps[],
 }
