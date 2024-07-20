@@ -14,6 +14,7 @@ export const DATA = {
     github: 'https://github.com/kinotio',
     discord: 'https://discord.gg/cskvbKQA',
     linkedin: 'https://linkedin.com/company/kinotio',
+    x: 'https://x.com/kinotio_io',
   },
   color: {
     gradient: {
@@ -43,6 +44,51 @@ export const DATA = {
       label: 'FAQ',
     },
   ] satisfies RouteProps[],
+  footer: {
+    contact: [
+      {
+        icon: 'Mail',
+        href: 'mailto:contact@kinotio.io',
+        label: 'contact@kinotio.io',
+      },
+    ],
+    help: [
+      {
+        href: '#contact',
+        label: 'Contact Us',
+      },
+      {
+        href: '#faq',
+        label: 'FAQ',
+      },
+      {
+        href: '#feedback',
+        label: 'Feedback',
+      },
+    ],
+    socials: [
+      {
+        icon: 'Github',
+        href: 'https://github.com/kinotio',
+        label: 'Github',
+      },
+      {
+        icon: 'X',
+        href: 'https://x.com/kinotio_io',
+        label: 'X',
+      },
+      {
+        icon: 'Linkedin',
+        href: 'https://linkedin.com/company/kinotio',
+        label: 'LinkedIn',
+      },
+      {
+        icon: 'MessageCircle',
+        href: 'https://discord.gg/cskvbKQA',
+        label: 'Discord',
+      },
+    ],
+  },
   partners: [
     {
       icon: 'Crown',
