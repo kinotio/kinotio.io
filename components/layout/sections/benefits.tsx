@@ -38,7 +38,7 @@ export const BenefitsSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-4 w-full">
             {DATA.benefits.map(({ icon, title, description }, idx) => (
-              <BlurFade key={idx} delay={BLUR_FADE_DELAY * (9 + idx)}>
+              <BlurFade key={idx} delay={(BLUR_FADE_DELAY + idx) * 0.1}>
                 <NeonGradientCard
                   neonColors={{
                     firstColor: DATA.color.gradient.from,
