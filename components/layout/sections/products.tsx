@@ -109,6 +109,7 @@ export const ProductsSection = () => {
                 style={{
                   borderRadius: 20,
                 }}
+                priority={true}
               ></Image>
             </NeonGradientCard>
           </BlurFade>
