@@ -35,8 +35,11 @@ type FAQProps = {
 }
 
 export const DATA = {
+  name: 'Kinotio',
+  url: 'https://kinotio.io',
+  description: 'We do open-source',
   typeform: 'https://grkisim22mo.typeform.com/to/tUMWdPVx',
-  url: {
+  social_url: {
     github: 'https://github.com/kinotio',
     discord: 'https://discord.gg/cskvbKQA',
     linkedin: 'https://linkedin.com/company/kinotio',
