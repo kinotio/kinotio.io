@@ -1,38 +1,11 @@
-type RouteProps = {
-  href: string
-  label: string
-}
-
-type PartenersOrSponsorsProps = {
-  icon: string
-  name: string
-}
-
-type BenefitsProps = {
-  icon: string
-  title: string
-  description: string
-}
-
-type FeaturesProps = {
-  icon: string
-  title: string
-  description: string
-}
-
-type ReviewProps = {
-  image: string
-  name: string
-  userName: string
-  comment: string
-  rating: number
-}
-
-type FAQProps = {
-  question: string
-  answer: string
-  value: string
-}
+import {
+  FeaturesProps,
+  PartenersOrSponsorsProps,
+  RouteProps,
+  BenefitsProps,
+  FAQProps,
+  ReviewProps,
+} from '@/lib/definitions'
 
 export const DATA = {
   name: 'Kinotio',
@@ -68,10 +41,10 @@ export const DATA = {
       href: '#products',
       label: 'Products',
     },
-    {
-      href: '#testimonials',
-      label: 'Testimonials',
-    },
+    // {
+    //   href: '#testimonials',
+    //   label: 'Testimonials',
+    // },
     {
       href: '#contributors',
       label: 'Contributors',
