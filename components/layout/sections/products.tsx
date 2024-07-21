@@ -103,7 +103,7 @@ export const ProductsSection = () => {
             >
               <Image
                 width={1000}
-                height={1000}
+                height={500}
                 src={DATA.images[repo.name as keyof typeof DATA.images]}
                 alt={repo.name}
                 style={{
