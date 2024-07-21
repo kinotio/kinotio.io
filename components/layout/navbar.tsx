@@ -22,7 +22,6 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
-import { BorderBeam } from '@/components/magicui/border-beam'
 import { ToggleTheme } from '@/components/layout/toogle-theme'
 
 import { DATA } from '@/data'
@@ -130,14 +129,6 @@ export const Navbar = () => {
           </Link>
         </Button>
       </div>
-
-      <BorderBeam
-        size={250}
-        duration={12}
-        delay={9}
-        colorFrom={DATA.color.gradient.from}
-        colorTo={DATA.color.gradient.to}
-      />
     </header>
   )
 }
