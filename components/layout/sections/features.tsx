@@ -27,7 +27,7 @@ export const FeaturesSection = () => {
         <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
           {`We are thrilled to introduce our open source developer community, a
         vibrant and inclusive hub for innovation, collaboration, and growth.
-        Here's what sets us apart and why you should join us`}
+        Here's what sets us apart and why you should join us.`}
         </h3>
       </BlurFade>
 

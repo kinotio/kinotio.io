@@ -65,6 +65,10 @@ export const DATA = {
       label: 'Features',
     },
     {
+      href: '#products',
+      label: 'Products',
+    },
+    {
       href: '#testimonials',
       label: 'Testimonials',
     },
@@ -125,6 +129,10 @@ export const DATA = {
         label: 'Discord',
       },
     ],
+  },
+  images: {
+    'drowser-studio': '/images/products/drowser-studio.png',
+    gelda: '/images/products/gelda.png',
   },
   partners: [
     {

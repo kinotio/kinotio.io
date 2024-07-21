@@ -11,4 +11,14 @@ async function getOrgContributors() {
   })
 }
 
-export { getOrgContributors }
+async function getOrgRepos() {
+  return await octokit.request('GET /orgs/kinotio/repos', {
+    org: 'ORG',
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+    type: 'public',
+  })
+}
+
+export { getOrgContributors, getOrgRepos }
