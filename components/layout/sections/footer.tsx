@@ -22,7 +22,7 @@ export const FooterSection = () => {
         className="p-10 bg-card border border-secondary rounded-2xl w-full place-items-stretch"
         color={[DATA.color.gradient.from, DATA.color.gradient.to]}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-5 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-5 gap-x-12 gap-y-8 z-50">
           <div className="col-span-full xl:col-span-2">
             <Link href="/" className="flex font-bold items-center">
               <Image
@@ -86,8 +86,8 @@ export const FooterSection = () => {
         </div>
 
         <Separator className="my-6" />
-        <section className="">
-          <h3 className="">
+        <section>
+          <h3>
             {` © ${getCurrentYear()} `}
             <Link
               target="_blank"

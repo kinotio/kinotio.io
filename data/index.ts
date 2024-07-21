@@ -54,20 +54,28 @@ export const DATA = {
   },
   navbar: [
     {
+      href: '#benefits',
+      label: 'Benefits',
+    },
+    {
+      href: '#features',
+      label: 'Features',
+    },
+    {
       href: '#testimonials',
       label: 'Testimonials',
     },
     {
-      href: '#team',
-      label: 'Team',
-    },
-    {
-      href: '#contact',
-      label: 'Contact',
+      href: '#contributors',
+      label: 'Contributors',
     },
     {
       href: '#faq',
       label: 'FAQ',
+    },
+    {
+      href: '#contact',
+      label: 'Contact',
     },
   ] satisfies RouteProps[],
   footer: {
