@@ -91,7 +91,7 @@ export const FooterSection = () => {
             {` © ${getCurrentYear()} `}
             <Link
               target="_blank"
-              href={DATA.url.github}
+              href={DATA.social_url.github}
               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
             >
               Kinotio
