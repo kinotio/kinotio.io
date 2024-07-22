@@ -3,6 +3,7 @@ import { icons } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Icon } from '@/components/ui/icon'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 import { DATA } from '@/data'
 
@@ -19,7 +20,7 @@ export const FeaturesSection = () => {
 
       <BlurFade delay={BLUR_FADE_DELAY * 3}>
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          What Makes Us Different
+          What <GradientText>Makes Us</GradientText> Different
         </h2>
       </BlurFade>
 

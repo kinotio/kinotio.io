@@ -24,6 +24,7 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 const FormSchema = z.object({
   name: z.string({
@@ -61,8 +62,9 @@ export const ContactSection = () => {
 
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-3xl md:text-4xl text-center font-bold">
-            {`We're committed to providing you with the support and information you
-          need.`}
+            We&apos;re committed to providing you with the{' '}
+            <GradientText>support</GradientText> and{' '}
+            <GradientText>information</GradientText> you need.
           </h2>
         </BlurFade>
       </div>

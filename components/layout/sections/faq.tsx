@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 import { DATA } from '@/data'
 
@@ -22,7 +23,7 @@ export const FAQSection = () => {
 
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-3xl md:text-4xl text-center font-bold">
-            Common Questions
+            Common <GradientText>Questions</GradientText>
           </h2>
         </BlurFade>
       </div>

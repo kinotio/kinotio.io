@@ -4,6 +4,7 @@ import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Icon } from '@/components/ui/icon'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 import { DATA } from '@/data'
 
@@ -23,7 +24,7 @@ export const BenefitsSection = () => {
 
             <BlurFade delay={BLUR_FADE_DELAY * 3}>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                For Parteners
+                For <GradientText>Parteners</GradientText>
               </h2>
             </BlurFade>
 
