@@ -107,6 +107,10 @@ export const DATA = {
     'drowser-studio': '/images/products/drowser-studio.png',
     gelda: '/images/products/gelda.png',
   },
+  products: {
+    'drowser-studio': 'Drowser Studio',
+    gelda: 'Gelda',
+  },
   partners: [
     {
       icon: 'Crown',

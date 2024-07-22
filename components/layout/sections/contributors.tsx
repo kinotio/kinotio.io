@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { Skeleton } from '@/components/ui/skeleton'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 import { getOrgContributors } from '@/lib/octokit'
 import { ContributorProps } from '@/lib/definitions'
@@ -35,7 +36,7 @@ export const ContributorsSection = () => {
 
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-            {`Meet Our Amazing Contributors`}
+            Meet Our <GradientText>Open Source</GradientText> Contributors
           </h2>
         </BlurFade>
       </div>

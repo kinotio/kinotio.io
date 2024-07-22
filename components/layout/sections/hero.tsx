@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import Particles from '@/components/magicui/particles'
 import BlurFade from '@/components/magicui/blur-fade'
+import { GradientText } from '@/components/shared/gradient-text'
 
 import { DATA } from '@/data'
 
@@ -30,10 +31,7 @@ export const HeroSection = () => {
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <BlurFade delay={BLUR_FADE_DELAY}>
               <h1>
-                Imagine, Develop and Share
-                <span className="text-transparent px-2 bg-gradient-to-r from-[#6048e7] to-[#56d49e] bg-clip-text">
-                  Openly
-                </span>
+                Imagine, Develop and Share <GradientText>Openly</GradientText>
               </h1>
             </BlurFade>
           </div>
