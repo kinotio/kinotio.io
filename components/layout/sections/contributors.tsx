@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, memo } from 'react'
+import { useEffect, useState, memo, useMemo } from 'react'
 import { GithubIcon } from 'lucide-react'
 import Link from 'next/link'
 
@@ -21,6 +21,8 @@ export const ContributorsSection = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
   }, [])
+
+  const memorizedContributors = useMemo(() => contributors, [contributors])
 
   return (
     <section id="contributors" className="container py-24 sm:py-32">
@@ -48,7 +50,7 @@ export const ContributorsSection = () => {
           </>
         ) : (
           <>
-            {contributors.map((contributor) => (
+            {memorizedContributors.map((contributor) => (
               <Contributor key={contributor.id} contributor={contributor} />
             ))}
           </>
