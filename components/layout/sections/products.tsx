@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GithubIcon } from 'lucide-react'
+import { useWindowSize } from 'react-use'
 
 import { Badge } from '@/components/ui/badge'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
@@ -18,6 +19,7 @@ import { DATA } from '@/data'
 export const ProductsSection = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [repos, setRepos] = useState<RepositoryProps[]>([])
+  const { width } = useWindowSize()
 
   useEffect(() => {
     getOrgRepos()
@@ -47,7 +49,7 @@ export const ProductsSection = () => {
           {Array.from({ length: 2 }).map((_, idx) => (
             <div
               key={idx}
-              className="grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12 lg:pt-44"
+              className="grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 mt-14 lg:gap-12 lg:pt-44"
             >
               <div className="space-y-4">
                 <div className="space-y-2">
@@ -62,10 +64,10 @@ export const ProductsSection = () => {
         </>
       ) : (
         <>
-          {repos.map((repo, idx) => (
+          {repos.map((repo) => (
             <div
               key={repo.id}
-              className="grid lg:grid-cols-2 place-items-center lg:gap-24 lg:pt-44"
+              className="grid lg:grid-cols-2 place-items-center mt-14 lg:gap-24 lg:pt-44"
             >
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -88,7 +90,7 @@ export const ProductsSection = () => {
 
                 <Separator className="my-6" />
 
-                <div className="mt-4">
+                <div className="my-4">
                   <Link href={repo.html_url}>
                     <Badge className="mx-1 my-1 gap-2">
                       <GithubIcon size={18} /> Source
@@ -97,25 +99,28 @@ export const ProductsSection = () => {
                 </div>
               </div>
 
-              <NeonGradientCard
-                neonColors={{
-                  firstColor: DATA.color.gradient.from,
-                  secondColor: DATA.color.gradient.to,
-                }}
-                className="lg:rotate-3 my-12"
-              >
-                <div className="w-full h-full">
-                  <Image
-                    fill
-                    src={DATA.images[repo.name as keyof typeof DATA.images]}
-                    alt={repo.name}
-                    style={{
-                      borderRadius: 20,
-                    }}
-                    priority={true}
-                  ></Image>
-                </div>
-              </NeonGradientCard>
+              {width > 1023 ? (
+                <NeonGradientCard
+                  neonColors={{
+                    firstColor: DATA.color.gradient.from,
+                    secondColor: DATA.color.gradient.to,
+                  }}
+                  className="lg:rotate-3 my-12 relative"
+                >
+                  <div className="w-full h-full relative">
+                    <Image
+                      fill
+                      src={DATA.images[repo.name as keyof typeof DATA.images]}
+                      alt={repo.name}
+                      style={{
+                        borderRadius: 20,
+                        objectFit: 'cover',
+                      }}
+                      priority
+                    ></Image>
+                  </div>
+                </NeonGradientCard>
+              ) : null}
             </div>
           ))}
         </>
