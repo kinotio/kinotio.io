@@ -74,7 +74,7 @@ export const Navbar = () => {
                       width={100}
                       height={100}
                       alt="Kinotio"
-                      priority={true}
+                      priority
                     />
                   </Link>
                 </SheetTitle>
