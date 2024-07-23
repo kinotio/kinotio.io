@@ -65,7 +65,10 @@ export const ContributorsSection = () => {
               >
                 <div className="flex flex-col items-center space-y-2">
                   <Avatar className="w-20 h-20">
-                    <AvatarImage src={contributor.avatar_url} />
+                    <AvatarImage
+                      src={contributor.avatar_url}
+                      alt={contributor.login}
+                    />
                   </Avatar>
                   <div className="text-center">
                     <h3 className="text-lg font-semibold">
@@ -74,7 +77,11 @@ export const ContributorsSection = () => {
                     <p className="text-muted-foreground text-sm">Contributor</p>
                   </div>
                   <div className="flex">
-                    <Link href={contributor.html_url} target="_blank">
+                    <Link
+                      href={contributor.html_url}
+                      target="_blank"
+                      aria-label="Github"
+                    >
                       <GithubIcon size={20} />
                     </Link>
                   </div>
