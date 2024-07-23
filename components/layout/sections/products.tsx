@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, memo } from 'react'
+import { useState, useEffect, memo, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GithubIcon } from 'lucide-react'
@@ -26,6 +26,8 @@ export const ProductsSection = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
   }, [])
+
+  const memorizedRepos = useMemo(() => repos, [repos])
 
   return (
     <section id="products" className="container py-24 sm:py-32">
@@ -63,7 +65,7 @@ export const ProductsSection = () => {
         </>
       ) : (
         <>
-          {repos.map((repo) => (
+          {memorizedRepos.map((repo) => (
             <Product key={repo.id} repo={repo} />
           ))}
         </>
