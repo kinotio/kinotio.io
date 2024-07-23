@@ -1,3 +1,7 @@
+'use client'
+
+import { memo } from 'react'
+
 import {
   Accordion,
   AccordionContent,
@@ -23,15 +27,33 @@ export const FAQSection = () => {
       </div>
 
       <Accordion type="single" collapsible className="AccordionRoot">
-        {DATA.faq.map(({ question, answer, value }, idx) => (
-          <AccordionItem key={idx} value={value}>
-            <AccordionTrigger className="text-left">
-              {question}
-            </AccordionTrigger>
-            <AccordionContent>{answer}</AccordionContent>
-          </AccordionItem>
+        {DATA.faq.map((faq, idx) => (
+          <FAQ key={idx} faq={faq} />
         ))}
       </Accordion>
     </section>
   )
 }
+
+const FAQ = memo(
+  ({
+    faq,
+  }: {
+    faq: {
+      question: string
+      answer: string
+      value: string
+    }
+  }) => {
+    return (
+      <AccordionItem value={faq.value}>
+        <AccordionTrigger className="text-left">
+          {faq.question}
+        </AccordionTrigger>
+        <AccordionContent>{faq.answer}</AccordionContent>
+      </AccordionItem>
+    )
+  }
+)
+
+FAQ.displayName = 'FAQ'
