@@ -5,6 +5,7 @@ const nextConfig = {
   },
   env: {
     GH_TOKEN: process.env.GH_TOKEN,
+    PB_URL: process.env.PB_URL,
   },
 }
 
