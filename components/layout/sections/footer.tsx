@@ -7,7 +7,6 @@ import { icons } from 'lucide-react'
 
 import { Separator } from '@/components/ui/separator'
 import { Icon } from '@/components/ui/icon'
-import ShineBorder from '@/components/magicui/shine-border'
 
 import { getCurrentYear } from '@/lib/utils'
 
