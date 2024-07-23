@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -25,6 +26,8 @@ import {
 } from '@/components/ui/form'
 import { GradientText } from '@/components/shared/gradient-text'
 
+import { saveContact } from '@/lib/pocketbase'
+
 const FormSchema = z.object({
   name: z.string({
     required_error: 'Please provide your name',
@@ -38,14 +41,20 @@ const FormSchema = z.object({
 })
 
 export const ContactSection = () => {
+  const [loading, setLoading] = useState<boolean>(false)
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data)
-    toast('Your message has been sent!')
-    form.reset()
+    setLoading(true)
+    saveContact(data)
+      .then(() => toast('Your message has been sent!'))
+      .catch((err) => console.log(err))
+      .finally(() => {
+        form.reset()
+        setLoading(false)
+      })
   }
 
   return (
@@ -94,7 +103,6 @@ export const ContactSection = () => {
                           placeholder="Enter your name"
                           onChange={field.onChange}
                           defaultValue={field.value}
-                          value={field.value}
                         />
                       </FormControl>
                       <FormMessage />
@@ -115,7 +123,6 @@ export const ContactSection = () => {
                           placeholder="Enter your email"
                           onChange={field.onChange}
                           defaultValue={field.value}
-                          value={field.value}
                         />
                       </FormControl>
                       <FormMessage />
@@ -135,7 +142,6 @@ export const ContactSection = () => {
                           placeholder="Enter your message"
                           onChange={field.onChange}
                           defaultValue={field.value}
-                          value={field.value}
                         />
                       </FormControl>
                       <FormMessage />
@@ -147,8 +153,9 @@ export const ContactSection = () => {
                   type="submit"
                   className="w-full dark:!bg-white dark:!text-black !bg-black !text-white"
                   onClick={form.handleSubmit(onSubmit)}
+                  disabled={loading}
                 >
-                  Submit
+                  {loading ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </Form>
