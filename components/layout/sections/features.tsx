@@ -1,3 +1,6 @@
+'use client'
+
+import { memo } from 'react'
 import { icons } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -24,25 +27,39 @@ export const FeaturesSection = () => {
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
-        {DATA.features.map(({ icon, title, description }, idx) => (
-          <Card key={idx} className="h-full bg-background border-0 shadow-none">
-            <CardHeader className="flex justify-center items-center h-36">
-              <div className="from-primary-200 to-primary-500 p-2 rounded-full ring-8 ring-gradient-to-r mb-4 bg-gradient-to-r from-[#6048e7] to-[#56d49e] ">
-                <Icon
-                  name={icon as keyof typeof icons}
-                  size={24}
-                  color="hsl(var(--primary))"
-                  className="text-primary"
-                />
-              </div>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground text-center">
-              {description}
-            </CardContent>
-          </Card>
+        {DATA.features.map((feature, idx) => (
+          <FeatureCard key={idx} feature={feature} />
         ))}
       </div>
     </section>
   )
 }
+
+const FeatureCard = memo(
+  ({
+    feature,
+  }: {
+    feature: { icon: string; title: string; description: string }
+  }) => {
+    return (
+      <Card className="h-full bg-background border-0 shadow-none">
+        <CardHeader className="flex justify-center items-center h-36">
+          <div className="from-primary-200 to-primary-500 p-2 rounded-full ring-8 ring-gradient-to-r mb-4 bg-gradient-to-r from-[#6048e7] to-[#56d49e] ">
+            <Icon
+              name={feature.icon as keyof typeof icons}
+              size={24}
+              color="hsl(var(--primary))"
+              className="text-primary"
+            />
+          </div>
+          <CardTitle>{feature.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="text-muted-foreground text-center">
+          {feature.description}
+        </CardContent>
+      </Card>
+    )
+  }
+)
+
+FeatureCard.displayName = 'FeatureCard'

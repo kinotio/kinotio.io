@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { GithubIcon } from 'lucide-react'
 import Link from 'next/link'
 
@@ -49,30 +49,7 @@ export const ContributorsSection = () => {
         ) : (
           <>
             {contributors.map((contributor) => (
-              <div
-                key={contributor.id}
-                className="flex flex-col items-center space-y-2"
-              >
-                <Avatar className="w-20 h-20">
-                  <AvatarImage
-                    src={contributor.avatar_url}
-                    alt={contributor.login}
-                  />
-                </Avatar>
-                <div className="text-center">
-                  <h3 className="text-lg font-semibold">{contributor.login}</h3>
-                  <p className="text-muted-foreground text-sm">Contributor</p>
-                </div>
-                <div className="flex">
-                  <Link
-                    href={contributor.html_url}
-                    target="_blank"
-                    aria-label="Github"
-                  >
-                    <GithubIcon size={20} />
-                  </Link>
-                </div>
-              </div>
+              <Contributor key={contributor.id} contributor={contributor} />
             ))}
           </>
         )}
@@ -80,3 +57,26 @@ export const ContributorsSection = () => {
     </section>
   )
 }
+
+const Contributor = memo(
+  ({ contributor }: { contributor: ContributorProps }) => {
+    return (
+      <div className="flex flex-col items-center space-y-2">
+        <Avatar className="w-20 h-20">
+          <AvatarImage src={contributor.avatar_url} alt={contributor.login} />
+        </Avatar>
+        <div className="text-center">
+          <h3 className="text-lg font-semibold">{contributor.login}</h3>
+          <p className="text-muted-foreground text-sm">Contributor</p>
+        </div>
+        <div className="flex">
+          <Link href={contributor.html_url} target="_blank" aria-label="Github">
+            <GithubIcon size={20} />
+          </Link>
+        </div>
+      </div>
+    )
+  }
+)
+
+Contributor.displayName = 'Contributor'
