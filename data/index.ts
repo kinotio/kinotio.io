@@ -37,10 +37,6 @@ export const DATA = {
       href: '#features',
       label: 'Features',
     },
-    {
-      href: '#products',
-      label: 'Products',
-    },
     // {
     //   href: '#testimonials',
     //   label: 'Testimonials',
@@ -107,10 +103,20 @@ export const DATA = {
     'drowser-studio': '/images/products/drowser-studio.png',
     gelda: '/images/products/gelda.png',
   },
-  products: {
-    'drowser-studio': 'Drowser Studio',
-    gelda: 'Gelda',
-  },
+  products: [
+    {
+      name: 'Drowser Studio',
+      description:
+        'Drowser Studio is a robust and intuitive app designed to help users track, visualize, and analyze the performance of various tests over time.',
+      href: '/drowser',
+    },
+    {
+      name: 'Gelda',
+      description:
+        'Gelda is a revolutionary AI-powered helpdesk assistant designed to provide users with an efficient and personalized support experience.',
+      href: '/gelda',
+    },
+  ],
   partners: [
     {
       icon: 'Crown',

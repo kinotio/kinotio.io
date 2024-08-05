@@ -20,6 +20,8 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
 import { ToggleTheme } from '@/components/layout/toogle-theme'
@@ -106,6 +108,31 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="bg-card text-base">
+              Products
+            </NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <div className="grid w-[500px] grid-cols-1 gap-5 p-4">
+                <ul className="flex flex-col gap-2">
+                  {DATA.products.map(({ name, description }, idx) => (
+                    <li
+                      key={idx}
+                      className="rounded-md p-3 text-sm hover:bg-muted"
+                    >
+                      <p className="mb-1 font-semibold leading-none text-foreground">
+                        {name}
+                      </p>
+                      <p className="line-clamp-2 text-muted-foreground">
+                        {description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
           <NavigationMenuItem>
             {DATA.navbar.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
