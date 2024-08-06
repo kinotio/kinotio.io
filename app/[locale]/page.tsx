@@ -8,7 +8,7 @@ import { HeroSection } from '@/components/layout/sections/hero'
 import { ContactSection } from '@/components/layout/sections/contact'
 import { ContributorsSection } from '@/components/layout/sections/contributors'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <HeroSection />
@@ -23,3 +23,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
