@@ -28,6 +28,8 @@ import { GradientText } from '@/components/shared/gradient-text'
 
 import { saveContact } from '@/lib/pocketbase'
 
+import { useScopedI18n } from '@/locales/client'
+
 const FormSchema = z.object({
   name: z.string({
     required_error: 'Please provide your name',
@@ -46,6 +48,9 @@ export const ContactSection = () => {
     resolver: zodResolver(FormSchema),
   })
 
+  const translate = useScopedI18n('contact')
+  const t = useScopedI18n('shared')
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
     setLoading(true)
     saveContact(data)
@@ -61,31 +66,30 @@ export const ContactSection = () => {
     <section id="contact" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-          Contact
+          {translate('contact')}
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold">
-          We&apos;re committed to providing you with the{' '}
-          <GradientText>support</GradientText> and{' '}
-          <GradientText>information</GradientText> you need.
+          {translate('commit')}{' '}
+          <GradientText>{translate('support')}</GradientText> {translate('and')}{' '}
+          <GradientText>{translate('information')}</GradientText>{' '}
+          {translate('you_need')}
         </h2>
       </div>
 
       <div className="relative grid md:grid-cols-1 xl:grid-cols-2 gap-8 w-full md:border md:border-secondary xl:border xl:border-secondary md:p-16 xl:p-16 rounded-xl bg-gray-50 dark:bg-black z-10">
         <div className="flex flex-col justify-center items-center xl:items-start">
-          <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            {translate('form.get_in_touch')}
+          </h2>
           <p className="text-muted-foreground text-center xl:text-start">
-            {`We'd love to hear from you. Fill out the form and we'll get back to
-            you as soon as possible.`}
+            {translate('form.description')}
           </p>
         </div>
         <Card>
           <CardHeader>
-            <CardTitle>Contact Us</CardTitle>
-            <CardDescription>
-              {`Fill out the form below and we'll get back to you as soon as
-              possible.`}
-            </CardDescription>
+            <CardTitle>{translate('form.contact_us')}</CardTitle>
+            <CardDescription>{translate('form.fill_out_form')}</CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -95,12 +99,12 @@ export const ContactSection = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem className="space-y-2">
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>{translate('form.name')}</FormLabel>
                       <FormControl>
                         <Input
                           id="name"
                           type="text"
-                          placeholder="Enter your name"
+                          placeholder={translate('form.enter_name')}
                           onChange={field.onChange}
                           defaultValue={field.value}
                         />
@@ -115,12 +119,12 @@ export const ContactSection = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem className="space-y-2">
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>{translate('form.email')}</FormLabel>
                       <FormControl>
                         <Input
                           id="email"
                           type="text"
-                          placeholder="Enter your email"
+                          placeholder={translate('form.enter_email')}
                           onChange={field.onChange}
                           defaultValue={field.value}
                         />
@@ -135,11 +139,11 @@ export const ContactSection = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem className="space-y-2">
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>{translate('form.message')}</FormLabel>
                       <FormControl>
                         <Textarea
                           id="message"
-                          placeholder="Enter your message"
+                          placeholder={translate('form.enter_message')}
                           onChange={field.onChange}
                           defaultValue={field.value}
                         />
@@ -155,7 +159,9 @@ export const ContactSection = () => {
                   onClick={form.handleSubmit(onSubmit)}
                   disabled={loading}
                 >
-                  {loading ? 'Sending...' : 'Send Message'}
+                  {loading
+                    ? `${t('sending')}...`
+                    : translate('form.send_message')}
                 </Button>
               </form>
             </Form>

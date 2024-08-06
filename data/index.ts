@@ -149,60 +149,44 @@ export const DATA = {
     {
       icon: 'Wallet',
       name: 'financial_benefits',
-      description: 'financial_benefits_description',
     },
     {
       icon: 'TrendingUp',
       name: 'market_insights',
-      description: 'market_insights_description',
     },
     {
       icon: 'Handshake',
       name: 'csr',
-      description: 'csr_description',
     },
     {
       icon: 'Sparkle',
       name: 'influence_and_leadership',
-      description: 'influence_and_leadership_description',
     },
   ] satisfies BenefitsProps[],
   features: [
     {
       icon: 'Zap',
-      title: 'Diversity and Inclusion',
-      description:
-        'Supportive environment that welcomes contributors of all backgrounds and skill levels.',
+      name: 'diversity_inclusion',
     },
     {
       icon: 'BadgeCheck',
-      title: 'Contributor Recognition',
-      description:
-        'Opportunities for contributors to present their work at community events and conferences.',
+      name: 'contributor_recognition',
     },
     {
       icon: 'Vote',
-      title: 'Open Decision-Making',
-      description:
-        'Community involvement in key decisions through votes, polls, and discussions.',
+      name: 'open_decision_making',
     },
     {
       icon: 'Lightbulb',
-      title: 'Innovation Focus',
-      description:
-        'Encouragement of experimental projects and innovative ideas.',
+      name: 'innovation_focus',
     },
     {
       icon: 'Map',
-      title: 'Collaborative Roadmapping',
-      description:
-        'Regular updates and reviews to align with community and user needs.',
+      name: 'collaborative_roadmapping',
     },
     {
       icon: 'HeartHandshake',
-      title: 'Ethical and Responsible Development',
-      description:
-        'Projects aimed at solving social issues and contributing to the public good.',
+      name: 'ethical_responsible_development',
     },
   ] satisfies FeaturesProps[],
   reviews: [
@@ -236,31 +220,31 @@ export const DATA = {
       question: 'What is the primary goal of this open source community?',
       answer:
         'Our primary goal is to foster innovation, collaboration, and growth among developers by providing a supportive and inclusive environment. We aim to create high-quality open source software that addresses real-world problems and advances technology.',
-      value: 'item-1',
+      id: 'q1',
     },
     {
       question: 'Who can join the community?',
       answer:
         'Anyone with a passion for open source software is welcome to join! We embrace diversity and inclusivity, and we encourage developers of all backgrounds and skill levels to participate.',
-      value: 'item-2',
+      id: 'q2',
     },
     {
       question: 'How can I start contributing to projects?',
       answer:
         'To start contributing, browse our project repositories and look for issues tagged as “good first issue” or “help wanted.” You can also join our community discussions on forums and chat platforms to get more guidance. Don’t forget to check our comprehensive documentation and contribution guides.',
-      value: 'item-3',
+      id: 'q3',
     },
     {
       question: 'Can I propose new projects or features?',
       answer:
         'Absolutely! We encourage innovation and welcome new ideas. You can propose new projects or features through our collaborative roadmapping process, where community members discuss and prioritize new initiatives.',
-      value: 'item-4',
+      id: 'q4',
     },
     {
       question: 'How can I stay updated with community events and news?',
       answer:
         'Stay updated by following us on social media, subscribing to our newsletter, and participating in our forums and chat platforms. We regularly announce events, updates, and news through these channels.',
-      value: 'item-5',
+      id: 'q5',
     },
   ] satisfies FAQProps[],
 }
