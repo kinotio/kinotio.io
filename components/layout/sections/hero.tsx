@@ -9,12 +9,16 @@ import Particles from '@/components/magicui/particles'
 import BlurFade from '@/components/magicui/blur-fade'
 import { GradientText } from '@/components/shared/gradient-text'
 
+import { useScopedI18n } from '@/locales/client'
+
 import { DATA } from '@/data'
 
 const BLUR_FADE_DELAY = 0.02
 
 export const HeroSection = () => {
   const { theme } = useTheme()
+  const translate = useScopedI18n('hero')
+
   const [color, setColor] = useState(DATA.color.base.light)
 
   useEffect(() => {
@@ -31,14 +35,15 @@ export const HeroSection = () => {
           <div className="max-w-screen-md mx-auto text-center ">
             <BlurFade delay={BLUR_FADE_DELAY}>
               <h1 className="text-4xl md:text-8xl font-bold">
-                Imagine, Develop and Share <GradientText>Openly</GradientText>
+                {translate('title')}{' '}
+                <GradientText>{translate('openly')}</GradientText>
               </h1>
             </BlurFade>
           </div>
 
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-              {`Collaborative digital space where software, applications, or projects are developed and shared openly.`}
+              {translate('description')}
             </p>
           </BlurFade>
 
@@ -48,7 +53,7 @@ export const HeroSection = () => {
                 className="cursor-pointer w-5/6 md:w-1/4 font-bold group/arrow"
                 onClick={() => window.open(DATA.typeform, '__blank')}
               >
-                Join us
+                {translate('join')}
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Button>
             </div>
