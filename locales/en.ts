@@ -15,12 +15,11 @@ export default {
     contact: 'Contact Us',
   },
   hero: {
-    top: 'Introducing',
-    main: 'Quick Starter Template for your Next project',
-    sub: 'Packed with all necessary features to get started.',
-    firstButton: 'Get started',
-    tools: 'Built using Great Tools',
-    on: 'on',
+    title: 'Imagine, Develop and Share',
+    openly: 'Openly',
+    description:
+      'Collaborative digital space where software, applications, or projects are developed and shared openly.',
+    join: 'Join us',
   },
   notFound: {
     title: 'Page Not Found!',

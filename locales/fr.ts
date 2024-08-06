@@ -15,12 +15,11 @@ export default {
     contact: 'Nous contacter',
   },
   hero: {
-    top: 'Présentation de',
-    main: 'Modèle de démarrage rapide pour votre prochain projet',
-    sub: 'Doté de toutes les fonctionnalités nécessaires pour commencer.',
-    firstButton: 'Commencer',
-    tools: "Construit à l'aide d'excellents outils",
-    on: 'sur',
+    title: 'Imaginez, Développez et Partagez',
+    openly: 'Ouvertement',
+    description:
+      'Espace numérique collaboratif où les logiciels, applications ou projets sont développés et partagés ouvertement.',
+    join: 'Rejoignez-nous',
   },
   notFound: {
     title: 'Page non trouvée!',
