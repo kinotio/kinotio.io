@@ -148,27 +148,23 @@ export const DATA = {
   benefits: [
     {
       icon: 'Wallet',
-      title: 'Financial Benefits',
-      description:
-        'Reduced development costs by leveraging open source contributions and resources.',
+      name: 'financial_benefits',
+      description: 'financial_benefits_description',
     },
     {
       icon: 'TrendingUp',
-      title: 'Market Insights',
-      description:
-        'Feedback from a diverse group of users and developers to inform product development and improvement.',
+      name: 'market_insights',
+      description: 'market_insights_description',
     },
     {
       icon: 'Handshake',
-      title: 'Corporate Social Responsibility (CSR)',
-      description:
-        'Demonstration of commitment to open source principles and social responsibility.',
+      name: 'csr',
+      description: 'csr_description',
     },
     {
       icon: 'Sparkle',
-      title: 'Influence and Leadership',
-      description:
-        'Ability to shape industry standards and best practices through active participation and support.',
+      name: 'influence_and_leadership',
+      description: 'influence_and_leadership_description',
     },
   ] satisfies BenefitsProps[],
   features: [
