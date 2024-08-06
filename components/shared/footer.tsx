@@ -12,8 +12,11 @@ import { getCurrentYear } from '@/lib/utils'
 
 import { DATA } from '@/data'
 
+import { useScopedI18n } from '@/locales/client'
+
 export const FooterSection = () => {
   const { theme } = useTheme()
+  const translate = useScopedI18n('footer')
 
   return (
     <footer id="footer" className="container py-24 sm:py-32">
@@ -37,10 +40,10 @@ export const FooterSection = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Contact</h3>
-            {DATA.footer.contact.map((contact) => (
+            <h3 className="font-bold text-lg">{translate('contact')}</h3>
+            {DATA.footer.contact.map((contact, idx) => (
               <Link
-                key={contact.label}
+                key={idx}
                 href={contact.href}
                 className="flex gap-2 items-center opacity-60 hover:opacity-100"
               >
@@ -55,23 +58,23 @@ export const FooterSection = () => {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Help</h3>
-            {DATA.footer.help.map((help) => (
+            <h3 className="font-bold text-lg">{translate('help')}</h3>
+            {DATA.footer.help.map((help, idx) => (
               <Link
-                key={help.label}
+                key={idx}
                 href={help.href}
                 className="opacity-60 hover:opacity-100"
               >
-                {help.label}
+                {translate(help.name as keyof typeof translate)}
               </Link>
             ))}
           </div>
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Socials</h3>
-            {DATA.footer.socials.map((social) => (
+            <h3 className="font-bold text-lg">{translate('socials')}</h3>
+            {DATA.footer.socials.map((social, idx) => (
               <Link
-                key={social.label}
+                key={idx}
                 href={social.href}
                 className="opacity-60 hover:opacity-100"
               >

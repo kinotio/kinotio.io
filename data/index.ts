@@ -65,22 +65,22 @@ export const DATA = {
     help: [
       {
         href: '#contact',
-        label: 'Contact Us',
+        name: 'contact',
       },
       {
         href: '#faq',
-        label: 'FAQ',
+        name: 'faq',
       },
       {
         href: '#feedback',
-        label: 'Feedback',
+        name: 'feedback',
       },
     ],
     socials: [
       {
         icon: 'Github',
         href: 'https://github.com/kinotio',
-        label: 'Github',
+        name: 'github',
       },
       {
         icon: 'X',
