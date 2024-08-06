@@ -114,21 +114,22 @@ export const Navbar = () => {
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="grid w-[500px] grid-cols-1 gap-5 p-4">
-                <ul className="flex flex-col gap-2">
-                  {DATA.products.map(({ name, description }, idx) => (
-                    <li
+                <div className="flex flex-col gap-2">
+                  {DATA.products.map(({ name, description, href }, idx) => (
+                    <Link
                       key={idx}
                       className="rounded-md p-3 text-sm hover:bg-muted"
+                      href={href}
                     >
-                      <p className="mb-1 font-semibold leading-none text-foreground">
+                      <span className="mb-1 font-semibold leading-none text-foreground">
                         {name}
-                      </p>
-                      <p className="line-clamp-2 text-muted-foreground">
+                      </span>
+                      <span className="line-clamp-2 text-muted-foreground">
                         {description}
-                      </p>
-                    </li>
+                      </span>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>

@@ -60,7 +60,8 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-background', inter.className)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           <Navbar />
