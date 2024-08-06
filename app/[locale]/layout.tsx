@@ -8,12 +8,13 @@ import { I18nProviderClient } from '@/locales/client'
 
 import { DATA } from '@/data'
 
-type Props = {
+type MetadataProps = {
   params: { locale: string }
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export const generateMetadata = async ({
+  params,
+}: MetadataProps): Promise<Metadata> => {
   const locale = params.locale
 
   return {
@@ -65,13 +66,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function SubLayout({
+const SubLayout = ({
   children,
   params: { locale },
 }: Readonly<{
   children: React.ReactNode
   params: { locale: string }
-}>) {
+}>) => {
   return (
     <ThemeProvider
       attribute="class"
@@ -87,3 +88,5 @@ export default function SubLayout({
     </ThemeProvider>
   )
 }
+
+export default SubLayout

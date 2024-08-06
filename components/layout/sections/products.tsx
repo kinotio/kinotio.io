@@ -80,9 +80,7 @@ const Product = memo(({ repo }: { repo: RepositoryProps }) => {
   return (
     <div className="grid lg:grid-cols-2 place-items-center mt-14 lg:gap-24 lg:pt-44">
       <div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          {DATA.products[repo.name as keyof typeof DATA.products]}
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">{repo.name}</h2>
 
         <p className="text-xl text-muted-foreground mb-8">{repo.description}</p>
 

@@ -8,11 +8,11 @@ import { cn } from '@/lib/utils'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   const locale = cookies().get('Next-Locale')?.value || 'en'
 
   return (
@@ -23,3 +23,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+export default RootLayout
