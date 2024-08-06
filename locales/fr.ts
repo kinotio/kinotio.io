@@ -7,6 +7,13 @@ export default {
     faq: 'FAQ',
     contact: 'Contact',
   },
+  footer: {
+    help: 'Aide',
+    socials: 'Réseaux sociaux',
+    feedback: "Retour d'information",
+    faq: 'FAQ',
+    contact: 'Nous contacter',
+  },
   hero: {
     top: 'Présentation de',
     main: 'Modèle de démarrage rapide pour votre prochain projet',

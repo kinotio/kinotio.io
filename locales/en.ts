@@ -7,6 +7,13 @@ export default {
     faq: 'FAQ',
     contact: 'Contact',
   },
+  footer: {
+    help: 'Help',
+    socials: 'Socials',
+    feedback: 'Feedback',
+    faq: 'FAQ',
+    contact: 'Contact Us',
+  },
   hero: {
     top: 'Introducing',
     main: 'Quick Starter Template for your Next project',

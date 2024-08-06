@@ -81,9 +81,9 @@ export default function SubLayout({
     >
       <I18nProviderClient locale={locale}>
         <Navbar />
+        <main>{children}</main>
+        <Toaster />
       </I18nProviderClient>
-      <main>{children}</main>
-      <Toaster />
     </ThemeProvider>
   )
 }
