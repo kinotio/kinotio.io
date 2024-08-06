@@ -146,13 +146,11 @@ export type PartenersOrSponsorsProps = {
 export type BenefitsProps = {
   icon: string
   name: string
-  description: string
 }
 
 export type FeaturesProps = {
   icon: string
-  title: string
-  description: string
+  name: string
 }
 
 export type ReviewProps = {
@@ -166,5 +164,5 @@ export type ReviewProps = {
 export type FAQProps = {
   question: string
   answer: string
-  value: string
+  id: string
 }

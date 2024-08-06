@@ -11,9 +11,13 @@ import { GradientText } from '@/components/shared/gradient-text'
 import { getOrgContributors } from '@/lib/octokit'
 import { ContributorProps } from '@/lib/definitions'
 
+import { useScopedI18n } from '@/locales/client'
+
 export const ContributorsSection = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [contributors, setContributors] = useState<ContributorProps[]>([])
+
+  const translate = useScopedI18n('contributors')
 
   useEffect(() => {
     getOrgContributors()
@@ -28,10 +32,12 @@ export const ContributorsSection = () => {
     <section id="contributors" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-          Contributors
+          {translate('contributors')}
         </h2>
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Meet Our <GradientText>Open Source</GradientText> Contributors
+          {translate('meet_your')}{' '}
+          <GradientText>{translate('open_source')}</GradientText>{' '}
+          {translate('contributors')}
         </h2>
       </div>
 
@@ -51,7 +57,11 @@ export const ContributorsSection = () => {
         ) : (
           <>
             {memorizedContributors.map((contributor) => (
-              <Contributor key={contributor.id} contributor={contributor} />
+              <Contributor
+                key={contributor.id}
+                contributor={contributor}
+                translate={translate}
+              />
             ))}
           </>
         )}
@@ -61,7 +71,13 @@ export const ContributorsSection = () => {
 }
 
 const Contributor = memo(
-  ({ contributor }: { contributor: ContributorProps }) => {
+  ({
+    contributor,
+    translate,
+  }: {
+    contributor: ContributorProps
+    translate: any
+  }) => {
     return (
       <div className="flex flex-col items-center space-y-2">
         <Avatar className="w-20 h-20">
@@ -69,7 +85,9 @@ const Contributor = memo(
         </Avatar>
         <div className="text-center">
           <h3 className="text-lg font-semibold">{contributor.login}</h3>
-          <p className="text-muted-foreground text-sm">Contributor</p>
+          <p className="text-muted-foreground text-sm">
+            {translate('contributor')}
+          </p>
         </div>
         <div className="flex">
           <Link href={contributor.html_url} target="_blank" aria-label="Github">

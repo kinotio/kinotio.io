@@ -57,7 +57,7 @@ const BenefitCard = memo(
     translate,
   }: {
     idx: number
-    benefit: { icon: string; name: string; description: string }
+    benefit: { icon: string; name: string }
     translate: any
   }) => {
     return (
@@ -81,11 +81,11 @@ const BenefitCard = memo(
             </span>
           </div>
 
-          <CardTitle>{translate(benefit.name)}</CardTitle>
+          <CardTitle>{translate(`${benefit.name}.title`)}</CardTitle>
         </CardHeader>
 
         <CardContent className="text-muted-foreground">
-          {translate(benefit.description)}
+          {translate(`${benefit.name}.description`)}
         </CardContent>
       </NeonGradientCard>
     )
