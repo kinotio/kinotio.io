@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { Github, Menu } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -25,6 +25,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
 import { ToggleTheme } from '@/components/layout/toogle-theme'
+import { ToogleLocale } from '@/components/layout/toogle-locale'
 
 import { DATA } from '@/data'
 
@@ -147,6 +148,9 @@ export const Navbar = () => {
       </NavigationMenu>
 
       <div className="hidden lg:flex">
+        <Suspense>
+          <ToogleLocale />
+        </Suspense>
         <ToggleTheme />
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link
