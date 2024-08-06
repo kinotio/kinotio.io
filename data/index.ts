@@ -18,6 +18,18 @@ export const DATA = {
     linkedin: 'https://linkedin.com/company/kinotio',
     x: 'https://x.com/kinotio_io',
   },
+  keywords: [
+    'Open Source',
+    'Develop',
+    'Share',
+    'Startup',
+    'Openly',
+    'Imagine',
+    'Collaborative',
+    'Digital',
+    'Software',
+    'Application',
+  ],
   color: {
     gradient: {
       from: '#6048e7',
