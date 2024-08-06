@@ -1,9 +1,11 @@
 export default {
-  header: {
-    changelog: 'Changelog',
-    about: 'About',
-    login: 'Login',
-    dashboard: 'Dashboard',
+  navbar: {
+    products: 'Products',
+    benefits: 'Benefits',
+    features: 'Features',
+    contributors: 'Contributors',
+    faq: 'FAQ',
+    contact: 'Contact',
   },
   hero: {
     top: 'Introducing',

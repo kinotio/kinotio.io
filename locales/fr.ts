@@ -1,9 +1,11 @@
 export default {
-  header: {
-    changelog: 'Journal des modifications',
-    about: 'Environ',
-    login: 'Se connecter',
-    dashboard: 'Tableau de bord',
+  navbar: {
+    products: 'Produits',
+    benefits: 'Avantages',
+    features: 'Fonctionnalités',
+    contributors: 'Contributeurs',
+    faq: 'FAQ',
+    contact: 'Contact',
   },
   hero: {
     top: 'Présentation de',

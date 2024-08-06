@@ -135,7 +135,7 @@ export type RepositoryProps = {
 
 export type RouteProps = {
   href: string
-  label: string
+  name: string
 }
 
 export type PartenersOrSponsorsProps = {

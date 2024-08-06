@@ -31,11 +31,11 @@ export const DATA = {
   navbar: [
     {
       href: '#benefits',
-      label: 'Benefits',
+      name: 'benefits',
     },
     {
       href: '#features',
-      label: 'Features',
+      name: 'features',
     },
     // {
     //   href: '#testimonials',
@@ -43,15 +43,15 @@ export const DATA = {
     // },
     {
       href: '#contributors',
-      label: 'Contributors',
+      name: 'contributors',
     },
     {
       href: '#faq',
-      label: 'FAQ',
+      name: 'faq',
     },
     {
       href: '#contact',
-      label: 'Contact',
+      name: 'contact',
     },
   ] satisfies RouteProps[],
   footer: {

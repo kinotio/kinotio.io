@@ -32,7 +32,10 @@ export const ToogleLocale = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="w-full justify-start">
-          <LanguagesIcon className=" h-5 w-5" />
+          <div className="flex items-center gap-2">
+            <LanguagesIcon className="h-5 w-5" />
+            <span className="block lg:hidden">{currentLocale}</span>
+          </div>
           <span className="sr-only">Change Locale</span>
         </Button>
       </DropdownMenuTrigger>
