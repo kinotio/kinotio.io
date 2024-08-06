@@ -145,7 +145,7 @@ export type PartenersOrSponsorsProps = {
 
 export type BenefitsProps = {
   icon: string
-  title: string
+  name: string
   description: string
 }
 

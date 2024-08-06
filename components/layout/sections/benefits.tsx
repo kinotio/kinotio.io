@@ -8,32 +8,40 @@ import { Icon } from '@/components/ui/icon'
 import { NeonGradientCard } from '@/components/magicui/neon-gradient-card'
 import { GradientText } from '@/components/shared/gradient-text'
 
+import { useScopedI18n } from '@/locales/client'
+
 import { DATA } from '@/data'
 
 export const BenefitsSection = () => {
+  const translate = useScopedI18n('benefits')
+
   return (
     <section id="benefits" className="container">
       <div className="py-24 sm:py-32">
         <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
           <div>
             <h2 className="text-lg text-primary mb-2 tracking-wider">
-              Benefits
+              {translate('benefits')}
             </h2>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              For <GradientText>Parteners</GradientText>
+              {translate('for')}{' '}
+              <GradientText>{translate('parteners')}</GradientText>
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8">
-              By partnering with and sponsoring an open source community,
-              organizations can not only drive innovation and efficiency but
-              also strengthen their market position and reputation.
+              {translate('description')}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 w-full">
             {DATA.benefits.map((benefit, idx) => (
-              <BenefitCard key={idx} idx={idx} benefit={benefit} />
+              <BenefitCard
+                key={idx}
+                idx={idx}
+                benefit={benefit}
+                translate={translate}
+              />
             ))}
           </div>
         </div>
@@ -46,9 +54,11 @@ const BenefitCard = memo(
   ({
     idx,
     benefit,
+    translate,
   }: {
     idx: number
-    benefit: { icon: string; title: string; description: string }
+    benefit: { icon: string; name: string; description: string }
+    translate: any
   }) => {
     return (
       <NeonGradientCard
@@ -71,11 +81,11 @@ const BenefitCard = memo(
             </span>
           </div>
 
-          <CardTitle>{benefit.title}</CardTitle>
+          <CardTitle>{translate(benefit.name)}</CardTitle>
         </CardHeader>
 
         <CardContent className="text-muted-foreground">
-          {benefit.description}
+          {translate(benefit.description)}
         </CardContent>
       </NeonGradientCard>
     )
