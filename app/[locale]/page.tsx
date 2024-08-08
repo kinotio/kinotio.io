@@ -6,7 +6,6 @@ import { HeroSection } from '@/components/layout/sections/hero'
 // import { PartenersSection } from '@/components/layout/sections/parteners'
 // import { TestimonialSection } from '@/components/layout/sections/testimonial'
 import { ContactSection } from '@/components/layout/sections/contact'
-import { ContributorsSection } from '@/components/layout/sections/contributors'
 
 const Home = () => {
   return (
@@ -16,7 +15,6 @@ const Home = () => {
       <BenefitsSection />
       <FeaturesSection />
       {/* <TestimonialSection /> */}
-      <ContributorsSection />
       <FAQSection />
       <ContactSection />
       <FooterSection />

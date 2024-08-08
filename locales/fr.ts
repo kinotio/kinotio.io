@@ -87,10 +87,7 @@ export default {
     },
   },
   contributors: {
-    contributors: 'Contributeurs',
-    meet_your: 'Rencontrez nos',
-    open_source: 'Open Source',
-    contributor: 'Contributeur',
+    contributed_by: 'Contribué par',
   },
   faq: {
     faq: 'FAQ',
