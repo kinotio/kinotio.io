@@ -2,6 +2,7 @@
 
 import { useEffect, useState, memo } from 'react'
 
+import { Skeleton } from '@/components/ui/skeleton'
 import AvatarCircles from '@/components/magicui/avatar-circles'
 
 import { getOrgContributors } from '@/lib/octokit'
@@ -31,7 +32,20 @@ export const Contributors = memo(() => {
         <span className="mr-2 font-300 text-md">
           {translate('contributed_by')}
         </span>
-        <AvatarCircles numPeople={avatarUrls.length} avatarUrls={avatarUrls} />
+        {loading ? (
+          <>
+            <div className="z-10 flex -space-x-4 rtl:space-x-reverse">
+              {Array.from({ length: 10 }).map((_, idx) => (
+                <Skeleton key={idx} className="h-10 w-10 rounded-full" />
+              ))}
+            </div>
+          </>
+        ) : (
+          <AvatarCircles
+            numPeople={avatarUrls.length}
+            avatarUrls={avatarUrls}
+          />
+        )}
       </div>
     </div>
   )
