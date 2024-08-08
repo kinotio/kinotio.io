@@ -63,7 +63,9 @@ export const HeroSection = () => {
           </BlurFade>
         </div>
 
-        <Contributors />
+        <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <Contributors />
+        </BlurFade>
       </div>
 
       <Particles
