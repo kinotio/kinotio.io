@@ -87,13 +87,14 @@ export const FooterSection = () => {
         <Separator className="my-6" />
         <section>
           <h3>
+            Copyright
             {` © ${getCurrentYear()} `}
             <Link
               target="_blank"
               href={DATA.social_url.github}
               className="text-primary transition-all border-primary hover:border-b-2 ml-1"
             >
-              Kinotio
+              Kinotio. All rights reserved.
             </Link>
           </h3>
         </section>

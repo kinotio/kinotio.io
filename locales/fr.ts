@@ -125,8 +125,8 @@ export default {
   },
   contact: {
     contact: 'Contact',
-    commit: 'Nous nous engageons à vous fournir',
-    support: 'le soutien',
+    commit: 'Nous nous engageons à vous fournir le',
+    support: 'soutien',
     and: 'et',
     information: 'les informations',
     you_need: 'dont vous avez besoin.',
