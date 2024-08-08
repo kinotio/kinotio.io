@@ -47,7 +47,7 @@ const FeatureCard = memo(
     translate: any
   }) => {
     return (
-      <Card className="h-full bg-background border-0 shadow-none">
+      <Card className="h-full bg-background">
         <CardHeader className="flex justify-center items-center h-36">
           <div className="from-primary-200 to-primary-500 p-2 rounded-full ring-8 ring-gradient-to-r mb-4 bg-gradient-to-r from-[#6048e7] to-[#56d49e] ">
             <Icon

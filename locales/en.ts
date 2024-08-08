@@ -123,8 +123,8 @@ export default {
   },
   contact: {
     contact: 'Contact',
-    commit: "We're committed to providing you with",
-    support: 'the support',
+    commit: "We're committed to providing you with the",
+    support: 'support',
     and: 'and',
     information: 'information',
     you_need: 'you need.',
