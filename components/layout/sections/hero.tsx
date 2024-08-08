@@ -5,9 +5,12 @@ import { ArrowRight } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
 import { Button } from '@/components/ui/button'
+
 import Particles from '@/components/magicui/particles'
 import BlurFade from '@/components/magicui/blur-fade'
+
 import { GradientText } from '@/components/shared/gradient-text'
+import { Contributors } from '@/components/shared/contributors'
 
 import { useScopedI18n } from '@/locales/client'
 
@@ -59,6 +62,8 @@ export const HeroSection = () => {
             </div>
           </BlurFade>
         </div>
+
+        <Contributors />
       </div>
 
       <Particles

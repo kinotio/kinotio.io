@@ -15,7 +15,7 @@ import { useScopedI18n } from '@/locales/client'
 
 import { DATA } from '@/data'
 
-export const FAQSection = () => {
+export const FAQSection = memo(() => {
   const translate = useScopedI18n('faq')
 
   return (
@@ -31,38 +31,28 @@ export const FAQSection = () => {
         </h2>
       </div>
 
-      <Accordion type="single" collapsible className="AccordionRoot">
+      <Accordion type="single" collapsible>
         {DATA.faq.map((faq, idx) => (
-          <FAQ key={idx} faq={faq} translate={translate} />
+          <AccordionItem key={idx} value={faq.id}>
+            <AccordionTrigger className="text-left">
+              {translate(
+                `faqs.${translate(
+                  faq.id as keyof typeof translate
+                )}.question` as keyof typeof translate
+              )}
+            </AccordionTrigger>
+            <AccordionContent>
+              {translate(
+                `faqs.${translate(
+                  faq.id as keyof typeof translate
+                )}.answer` as keyof typeof translate
+              )}
+            </AccordionContent>
+          </AccordionItem>
         ))}
       </Accordion>
     </section>
   )
-}
+})
 
-const FAQ = memo(
-  ({
-    faq,
-    translate,
-  }: {
-    faq: {
-      question: string
-      answer: string
-      id: string
-    }
-    translate: any
-  }) => {
-    return (
-      <AccordionItem value={faq.id}>
-        <AccordionTrigger className="text-left">
-          {translate(`faqs.${translate(faq.id)}.question`)}
-        </AccordionTrigger>
-        <AccordionContent>
-          {translate(`faqs.${translate(faq.id)}.answer`)}
-        </AccordionContent>
-      </AccordionItem>
-    )
-  }
-)
-
-FAQ.displayName = 'FAQ'
+FAQSection.displayName = 'FAQSection'

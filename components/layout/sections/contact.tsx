@@ -77,7 +77,7 @@ export const ContactSection = () => {
         </h2>
       </div>
 
-      <div className="relative grid md:grid-cols-1 xl:grid-cols-2 gap-8 w-full md:border md:border-secondary xl:border xl:border-secondary md:p-16 xl:p-16 rounded-xl bg-gray-50 dark:bg-black z-10">
+      <div className="relative grid md:grid-cols-1 xl:grid-cols-2 gap-8 w-full md:border md:border-secondary xl:border xl:border-secondary md:p-16 xl:p-16 rounded-xl z-10">
         <div className="flex flex-col justify-center items-center xl:items-start">
           <h2 className="text-3xl font-bold mb-4">
             {translate('form.get_in_touch')}
