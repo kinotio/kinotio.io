@@ -54,10 +54,6 @@ export const DATA = {
     //   label: 'Testimonials',
     // },
     {
-      href: '#contributors',
-      name: 'contributors',
-    },
-    {
       href: '#faq',
       name: 'faq',
     },

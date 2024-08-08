@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import React from "react";
+import React from 'react'
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
 interface AvatarCirclesProps {
-  className?: string;
-  numPeople?: number;
-  avatarUrls: string[];
+  className?: string
+  numPeople?: number
+  avatarUrls: string[]
 }
 
 const AvatarCircles = ({
@@ -16,7 +16,7 @@ const AvatarCircles = ({
   avatarUrls,
 }: AvatarCirclesProps) => {
   return (
-    <div className={cn("z-10 flex -space-x-4 rtl:space-x-reverse", className)}>
+    <div className={cn('z-10 flex -space-x-4 rtl:space-x-reverse', className)}>
       {avatarUrls.map((url, index) => (
         <img
           key={index}
@@ -34,7 +34,7 @@ const AvatarCircles = ({
         +{numPeople}
       </a>
     </div>
-  );
-};
+  )
+}
 
-export default AvatarCircles;
+export default AvatarCircles
