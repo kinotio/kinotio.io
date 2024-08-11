@@ -3,8 +3,6 @@
 import { useState, Suspense, SetStateAction, Dispatch } from 'react'
 import { Github, Menu } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
 
 import {
   Sheet,
@@ -26,6 +24,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { ToggleTheme } from '@/components/layout/toogle-theme'
 import { ToogleLocale } from '@/components/layout/toogle-locale'
+import { KinotioLogo } from '@/components/logos/kinotio-logo'
 
 import { useScopedI18n } from '@/locales/client'
 
@@ -34,33 +33,16 @@ import { DATA } from '@/data'
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { theme } = useTheme()
   const translate = useScopedI18n('navbar')
 
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
-        <Image
-          src={
-            theme === 'light'
-              ? '/images/logo-dark.png'
-              : '/images/logo-light.png'
-          }
-          width={100}
-          height={100}
-          alt="Kinotio"
-          className="ml-2"
-          priority={true}
-        />
+        <KinotioLogo width={100} height={30} className="ml-2" />
       </Link>
 
       {/* <!-- Mobile --> */}
-      <MobileMenu
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        theme={theme}
-        translate={translate}
-      />
+      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} translate={translate} />
 
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
@@ -125,12 +107,10 @@ export const Navbar = () => {
 const MobileMenu = ({
   isOpen,
   setIsOpen,
-  theme,
   translate,
 }: {
   isOpen: boolean
   setIsOpen: Dispatch<SetStateAction<boolean>>
-  theme: string | undefined
   translate: any
 }) => {
   return (
@@ -151,17 +131,7 @@ const MobileMenu = ({
             <SheetHeader className="mb-4 ml-4">
               <SheetTitle className="flex items-center">
                 <Link href="/" className="flex items-center">
-                  <Image
-                    src={
-                      theme === 'light'
-                        ? '/images/logo-dark.png'
-                        : '/images/logo-light.png'
-                    }
-                    width={100}
-                    height={100}
-                    alt="Kinotio"
-                    priority
-                  />
+                  <KinotioLogo width={100} height={30} className="ml-2" />
                 </Link>
               </SheetTitle>
             </SheetHeader>
