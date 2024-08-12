@@ -14,6 +14,8 @@ pnpm install
 pnpm dev
 ```
 
+And visit localhost:3000 to preview your changes.
+
 ## Contributors
 
 Main contributor is Ando [@andostronaut](https://github.com/andostronaut)
