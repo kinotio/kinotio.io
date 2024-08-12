@@ -1,16 +1,21 @@
-# kinotio.io
+# Kinotio
+
+The official website for Kinotio.
+
+To develop it locally, clone this repository and run the following command to start the local dev server:
 
 Built with [Next.js](https://nextjs.org/), [Shadcn/ui](https://ui.shadcn.com/)
 
-## Getting Started Locally
-
 ```bash
-git clone https://github.com/kinotio/kinotio.io.git
-cd kinotio.io
-bun install
-bun dev
+pnpm install
 ```
 
-## License
+```bash
+pnpm dev
+```
 
-Licensed under the [MIT license](LICENSE.md).
+And visit localhost:3000 to preview your changes.
+
+## Contributors
+
+Main contributor is Ando [@andostronaut](https://github.com/andostronaut)
