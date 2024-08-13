@@ -59,6 +59,8 @@ export const Navbar = () => {
                       key={idx}
                       className="rounded-md p-3 text-sm hover:bg-muted"
                       href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span className="mb-1 font-semibold leading-none text-foreground">
                         {name}
