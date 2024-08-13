@@ -113,16 +113,16 @@ export const DATA = {
   },
   products: [
     {
-      name: 'Drowser Studio',
+      name: 'Drowser',
       description:
-        'Drowser Studio is a robust and intuitive app designed to help users track, visualize, and analyze the performance of various tests over time.',
-      href: '/drowser',
+        'A easy way to implement and write Selenium with TypeScript using Deno.',
+      href: 'https://drowser.kinotio.io',
     },
     {
       name: 'Gelda',
       description:
         'Gelda is a revolutionary AI-powered helpdesk assistant designed to provide users with an efficient and personalized support experience.',
-      href: '/gelda',
+      href: 'https://gelda.kinotio.io',
     },
   ],
   partners: [
