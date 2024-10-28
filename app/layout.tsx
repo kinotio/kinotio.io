@@ -23,6 +23,10 @@ const RootLayout = ({
         src="https://umami.kinotio.io/script.js"
         data-website-id="1d14dd76-2bb9-4c87-a44d-1f6a8701754f"
       />
+      <Script
+        async
+        src="https://kinotio.instatus.com/en/6f8e5fad/widget/script.js"
+      />
       <body className={cn('min-h-screen bg-background', inter.className)}>
         {children}
       </body>

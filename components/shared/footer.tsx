@@ -6,6 +6,7 @@ import { icons } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { Icon } from '@/components/ui/icon'
 import { KinotioLogo } from '@/components/logos/kinotio-logo'
+import { Badge } from '@/components/ui/badge'
 
 import { getCurrentYear } from '@/lib/utils'
 
@@ -68,7 +69,8 @@ export const FooterSection = () => {
         </div>
 
         <Separator className="my-6" />
-        <section>
+
+        <section className="flex w-full justify-between">
           <h3>
             Copyright
             {` © ${getCurrentYear()} `}
@@ -80,6 +82,13 @@ export const FooterSection = () => {
               Kinotio. All rights reserved.
             </Link>
           </h3>
+
+          <Link href={'https://kinotio.instatus.com'}>
+            <Badge className="text-sm flex gap-3">
+              <span className="bg-green-400 w-3 h-3 rounded-full"></span>
+              <span>All systems operational</span>
+            </Badge>
+          </Link>
         </section>
       </div>
     </footer>
