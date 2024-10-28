@@ -10,7 +10,7 @@ import Particles from '@/components/magicui/particles'
 import BlurFade from '@/components/magicui/blur-fade'
 
 import { GradientText } from '@/components/shared/gradient-text'
-import { Contributors } from '@/components/shared/contributors'
+// import { Contributors } from '@/components/shared/contributors'
 
 import { useScopedI18n } from '@/locales/client'
 
@@ -63,9 +63,9 @@ export const HeroSection = () => {
           </BlurFade>
         </div>
 
-        <BlurFade delay={BLUR_FADE_DELAY * 9}>
+        {/* <BlurFade delay={BLUR_FADE_DELAY * 9}>
           <Contributors />
-        </BlurFade>
+        </BlurFade> */}
       </div>
 
       <Particles
