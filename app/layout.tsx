@@ -3,6 +3,7 @@ import '@devnomic/marquee/dist/index.css'
 
 import { Inter } from 'next/font/google'
 import { cookies } from 'next/headers'
+import Script from 'next/script'
 
 import { cn } from '@/lib/utils'
 
@@ -17,6 +18,11 @@ const RootLayout = ({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <Script
+        async
+        src="https://umami.kinotio.io/script.js"
+        data-website-id="1d14dd76-2bb9-4c87-a44d-1f6a8701754f"
+      />
       <body className={cn('min-h-screen bg-background', inter.className)}>
         {children}
       </body>
