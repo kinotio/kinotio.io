@@ -21,7 +21,7 @@ const RootLayout = ({
       <Script
         async
         src="https://analytics.kinotio.io/script.js"
-        data-website-id="ea933fd4-1ebc-441c-82ba-614866ef59ac"
+        data-website-id="8fd071bf-a0ad-4da4-8fb8-cc8d52c18e2d"
       />
       <Script
         async
