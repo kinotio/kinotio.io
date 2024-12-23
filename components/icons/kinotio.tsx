@@ -1,5 +1,5 @@
-export const KinotioLogo = (
-  props: React.ComponentProps<'svg'>,
+export const Kinotio = (
+  props: React.ComponentProps<'svg'>
 ): React.ReactElement => (
   <svg
     viewBox="0 0 2199 648"

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
-import { Navbar } from '@/components/shared/navbar'
-import { ThemeProvider } from '@/components/layout/theme-provider'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 
 import { I18nProviderClient } from '@/locales/client'
@@ -70,8 +71,9 @@ const SubLayout = ({
       disableTransitionOnChange
     >
       <I18nProviderClient locale={locale}>
-        <Navbar />
-        <main>{children}</main>
+        <Header />
+        <main className="container">{children}</main>
+        <Footer />
         <Toaster />
       </I18nProviderClient>
     </ThemeProvider>
