@@ -71,9 +71,15 @@ const SubLayout = ({
       disableTransitionOnChange
     >
       <I18nProviderClient locale={locale}>
-        <Header />
-        <main className="container">{children}</main>
-        <Footer />
+        <div className="min-h-screen bg-gradient-to-br from-black via-[#1a1a2e] to-[#16213e] relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-soft-light"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black opacity-20"></div>
+
+          <Header />
+          <main className="container">{children}</main>
+          <Footer />
+        </div>
+
         <Toaster />
       </I18nProviderClient>
     </ThemeProvider>
